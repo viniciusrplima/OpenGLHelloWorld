@@ -1,0 +1,9 @@
+
+build/
+.git/
+.vscode
+
+*.o
+*.ini
+
+launcher

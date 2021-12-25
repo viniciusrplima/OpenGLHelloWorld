@@ -1,17 +1,17 @@
 .PHONY: clean run
 .DEFAULT: build
 
-EXEC_FILE = launcher
+EXEC_FILE=launcher
 
-CXX = g++
+CXX=g++
 
-SRC_DIR = ./src
-BUILD_DIR = ./build
-SRCS := $(shell find $(SRC_DIR) -name *.cpp)
-OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
+SRC_DIR=./src
+BUILD_DIR=./build
+SRCS:=$(shell find $(SRC_DIR) -name *.cpp)
+OBJS:=$(SRCS:%=$(BUILD_DIR)/%.o)
 
-CPPINCS =
-CPPLIBS =
+CPPINCS=	# include paths
+CPPLIBS=	# extra libraries
 
 build: $(EXEC_FILE)
 
@@ -25,5 +25,5 @@ $(BUILD_DIR)/%.cpp.o: %.cpp
 clean:
 	-rm $(EXEC_FILE) $(OBJS)
 
-run:
+run: build
 	./$(EXEC_FILE)

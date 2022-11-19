@@ -6,4 +6,4 @@ build/
 *.o
 *.ini
 
-launcher
+OpenGLHelloWorld

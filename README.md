@@ -1,18 +1,9 @@
-# C++ Template
+# OpenGL Hello World
 
-Template for c++ programs. Previous configuration to facilitate your development.
-### How to use
+Simple exemple program for OpenGL
 
-You can write code at `/src` folder. Use `.cpp` extension in filenames for that Makefile can find them.
+To run execute: 
 
-If you must add extra library paths use `CPPINCS` and if you must add extra static libraries use `CPPLIBS` at `Makefile`.
-
-You can change excutable filename changing `EXEC_FILE` variable at `Makefile`.
-
-### Make commands
-
-Command | Description |
-:-------|:--------------|
-build   | compile source code |
-run     | execute program |
-clean   | remove build files |
+```
+make run
+```

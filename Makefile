@@ -1,7 +1,7 @@
 .PHONY: clean run
 .DEFAULT: build
 
-EXEC_FILE=launcher
+EXEC_FILE=OpenGLHelloWorld
 
 CXX=g++
 
@@ -11,7 +11,7 @@ SRCS:=$(shell find $(SRC_DIR) -name *.cpp)
 OBJS:=$(SRCS:%=$(BUILD_DIR)/%.o)
 
 CPPINCS=	# include paths
-CPPLIBS=	# extra libraries
+CPPLIBS= -lGL -Llib -lglfw -ldl -lGLEW	# extra libraries
 
 build: $(EXEC_FILE)
 
